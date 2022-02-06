@@ -51,6 +51,12 @@ public class PlatformController : MonoBehaviour
                 _isCollision = true;
             }
         }
+
+        if(collision.gameObject.TryGetComponent(out Bullet bullet))
+        {
+            OnColider();
+            Debug.Log("Col");
+        }
     }
 
     private void OnColider()

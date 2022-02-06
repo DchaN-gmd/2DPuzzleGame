@@ -24,7 +24,6 @@ public class Character : MonoBehaviour
         _playerState = PlayerState.Idle;
     }
 
-    
     void Update()
     {
         _inertiaOfMove = Input.GetAxis("Horizontal");
@@ -112,11 +111,5 @@ public class Character : MonoBehaviour
         Idle,
         Walk,
         Jump
-    }
-
-    private enum SideMovement
-    {
-        Right,
-        Left
     }
 }

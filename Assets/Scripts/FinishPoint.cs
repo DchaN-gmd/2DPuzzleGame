@@ -12,31 +12,31 @@ public class FinishPoint : MonoBehaviour
 
     private enum CharacterColor
     {
-        pink,
-        blue
+        Pink,
+        Blue
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.pink)
+        if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.Pink)
         {
             _characterComedOnFinish?.Invoke();
         }
 
-        if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.blue)
+        if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.Blue)
         {
             _characterComedOnFinish?.Invoke();
         }
     }
-
-    private void OnCollisionExit2D(Collision2D collision)
+    
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.pink)
+        if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.Pink)
         {
             _characterGoedOutFinish?.Invoke();
         }
 
-        if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.blue)
+        if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.Blue)
         {
             _characterGoedOutFinish?.Invoke();
         }

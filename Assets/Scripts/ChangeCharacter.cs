@@ -24,7 +24,7 @@ public class ChangeCharacter : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C))
         {
             Change();
         }

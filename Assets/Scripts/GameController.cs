@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    private int _charactersCount;
-    [SerializeField]private int _charactersFinished;
-    private ChangeCharacter _changeCharacter;
-    private List<FinishPoint> _finishPoints;
+    [SerializeField] private ChangeCharacter _changeCharacter;
+    [SerializeField] private List<FinishPoint> _finishPoints;
 
+    private int _charactersCount;
+    private int _charactersFinished;
+    
     private void Start()
     {
-        ChangeCharacter _changeCharacter = new ChangeCharacter();
         _charactersCount = _changeCharacter.CharactersCount;
         _finishPoints.AddRange(gameObject.GetComponentsInChildren<FinishPoint>());
+
         foreach(FinishPoint point in _finishPoints)
         {
             point._characterComedOnFinish.AddListener(OnFinishPoint);
