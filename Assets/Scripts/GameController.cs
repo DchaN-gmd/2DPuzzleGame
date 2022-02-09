@@ -2,24 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private ChangeCharacter _changeCharacter;
     [SerializeField] private List<FinishPoint> _finishPoints;
 
     private int _charactersCount;
     private int _charactersFinished;
-    
+    private Abyss _abyss;
+    private ChangeCharacter _changeCharacter;
+
+    [HideInInspector] public static UnityAction _playerDied;
+
     private void Start()
     {
-        _charactersCount = _changeCharacter.CharactersCount;
+        _charactersCount = FindObjectOfType<ChangeCharacter>().GetComponent<ChangeCharacter>().CharactersCount;
         _finishPoints.AddRange(gameObject.GetComponentsInChildren<FinishPoint>());
 
-        foreach(FinishPoint point in _finishPoints)
+        SubscribeToGameOverEvent();
+    }
+
+    private void SubscribeToGameOverEvent()
+    {
+        _abyss = FindObjectOfType<Abyss>().GetComponent<Abyss>();
+        _abyss.playerFall.AddListener(GameOver);
+
+        Bullet.playerShooted += GameOver;
+
+        foreach (FinishPoint point in _finishPoints)
         {
-            point._characterComedOnFinish.AddListener(OnFinishPoint);
-            point._characterGoedOutFinish.AddListener(OnOutFinishPoint);
+            point.characterComedOnFinish.AddListener(OnFinishPoint);
+            point.characterGoedOutFinish.AddListener(OnOutFinishPoint);
         }
     }
 
@@ -27,9 +41,11 @@ public class GameController : MonoBehaviour
     {
         foreach (FinishPoint point in _finishPoints)
         {
-            point._characterComedOnFinish.RemoveListener(OnFinishPoint);
-            point._characterGoedOutFinish.RemoveListener(OnOutFinishPoint);
+            point.characterComedOnFinish.RemoveListener(OnFinishPoint);
+            point.characterGoedOutFinish.RemoveListener(OnOutFinishPoint);
         }
+        _abyss.playerFall.RemoveListener(GameOver);
+        Bullet.playerShooted -= GameOver;
     }
 
     private void OnFinishPoint()
@@ -46,5 +62,12 @@ public class GameController : MonoBehaviour
     private void FinishGame()
     {
         Debug.Log("ХААААААААААААААРРРОШЬ");
+    }
+
+    private void GameOver()
+    {
+        _playerDied?.Invoke();
+        Time.timeScale = 0.15f;
+        Debug.Log("Game over");
     }
 }

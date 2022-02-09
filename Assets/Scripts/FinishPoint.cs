@@ -7,8 +7,8 @@ public class FinishPoint : MonoBehaviour
 {
     [SerializeField] private CharacterColor _targetCharacter;
 
-    [HideInInspector] public UnityEvent _characterComedOnFinish;
-    [HideInInspector] public UnityEvent _characterGoedOutFinish;
+    [HideInInspector] public UnityEvent characterComedOnFinish;
+    [HideInInspector] public UnityEvent characterGoedOutFinish;
 
     private enum CharacterColor
     {
@@ -20,12 +20,12 @@ public class FinishPoint : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.Pink)
         {
-            _characterComedOnFinish?.Invoke();
+            characterComedOnFinish?.Invoke();
         }
 
         if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.Blue)
         {
-            _characterComedOnFinish?.Invoke();
+            characterComedOnFinish?.Invoke();
         }
     }
     
@@ -33,12 +33,12 @@ public class FinishPoint : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out PinkCharacter pinkCharacter) && _targetCharacter == CharacterColor.Pink)
         {
-            _characterGoedOutFinish?.Invoke();
+            characterGoedOutFinish?.Invoke();
         }
 
         if (collision.gameObject.TryGetComponent(out BlueCharacter blueCharacter) && _targetCharacter == CharacterColor.Blue)
         {
-            _characterGoedOutFinish?.Invoke();
+            characterGoedOutFinish?.Invoke();
         }
     }
 }

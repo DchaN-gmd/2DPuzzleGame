@@ -59,15 +59,15 @@
     <Compile Include="Assets\Scripts\PlatformController.cs" />
     <Compile Include="Assets\Scripts\MoveWallButton.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
-    <Compile Include="Assets\Scripts\GameOver.cs" />
-    <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\Abyss.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\Character.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\BlueCharacter.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\PinkCharacter.cs" />
-    <Compile Include="Assets\Scripts\ShooterEnemy.cs" />
-    <Compile Include="Assets\Scripts\ChangeCharacter.cs" />
-    <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\BlueCharacter.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\PinkCharacter.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\ShooterEnemy.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -265,38 +265,14 @@
     <Reference Include="UnityEngine.XRModule">
       <HintPath>D:\Unity\2020.3.11f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.XRModule.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="PsdPlugin">
-      <HintPath>Library\ScriptAssemblies\PsdPlugin.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Psdimporter.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Path.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.001">
-      <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -307,20 +283,8 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.PixelPerfect.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.SpriteShape.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Common.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
@@ -672,14 +636,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{C38463E9-775F-8145-1CB8-79638916931F}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{71339960-8BE8-EA11-F398-99880D554EAB}</Project>
-      <Name>Unity.2D.PixelPerfect</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{F3377877-05E7-A7CE-2D8D-79F74186FD8D}</Project>
       <Name>Unity.Timeline</Name>
@@ -691,30 +647,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{7FBB1D20-78BB-59C0-CD0F-B032FAD6599E}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{2865E2A4-0089-00A3-26EC-A31343685EAD}</Project>
-      <Name>Unity.Mathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{8F9EE3A0-E16A-966E-F7C6-3F38CD79568D}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
-      <Project>{C2498C54-737D-4FBA-1915-061033960190}</Project>
-      <Name>Unity.2D.Animation.Triangle.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{33187032-1D28-13B2-C598-118467B6984A}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{45926A99-502F-607A-84F0-F9F929EE62CF}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{FA6561E3-F56E-9E98-00EA-2CB253F50E09}</Project>
-      <Name>Unity.2D.SpriteShape.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

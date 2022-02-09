@@ -6,8 +6,10 @@ public class PlatformController : MonoBehaviour
 {
     private BoxCollider2D _colider;
 
-    [SerializeField] MainCharacterOfPlatform _characterColor;
-    [SerializeField] private float _timeOfOnColider = 3f;
+    [SerializeField] 
+    MainCharacterOfPlatform _characterColor;
+    [SerializeField]
+    private float _timeOfOnColider = 3f;
 
     private float _timer = 0;
     private bool _isCollision;
@@ -55,7 +57,6 @@ public class PlatformController : MonoBehaviour
         if(collision.gameObject.TryGetComponent(out Bullet bullet))
         {
             OnColider();
-            Debug.Log("Col");
         }
     }
 
