@@ -7,7 +7,7 @@ public class ChangeCharacter : MonoBehaviour
 {
     [SerializeField] private List<Character> characters;
 
-    public UnityAction <Character> characterChanged;
+    [HideInInspector] public UnityAction <Character> characterChanged;
 
     public int CharactersCount { get; private set; }
 
@@ -34,7 +34,9 @@ public class ChangeCharacter : MonoBehaviour
     {
         characters[0].GetComponent<Character>().enabled = false;
         characters[1].GetComponent<Character>().enabled = true;
+
         Character lastCharacter = characters[0];
+
         for (int i = 1; i<=characters.Count-1; i++)
         {
             characters[i - 1] = characters[i];

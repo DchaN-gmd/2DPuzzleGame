@@ -56,18 +56,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlatformController.cs" />
-    <Compile Include="Assets\Scripts\MoveWallButton.cs" />
+    <Compile Include="Assets\Scripts\Platform\PlatformController.cs" />
+    <Compile Include="Assets\Scripts\Platform\MoveWallButton.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\PatrolEnemy.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IPlayerKillable.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\Abyss.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Character.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\BlueCharacter.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PinkCharacter.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\ShooterEnemy.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
+    <Compile Include="Assets\Scripts\Particles\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Pool\PoolMono.cs" />
+    <Compile Include="Assets\Scripts\Pool\ExploisonsPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -274,6 +280,9 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -282,9 +291,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll</HintPath>

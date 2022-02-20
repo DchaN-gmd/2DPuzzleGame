@@ -7,18 +7,20 @@ public class Bullet : MonoBehaviour
 {
     [Header("BulletSpeed"), SerializeField]
     private float _speed;
-    [SerializeField] 
-    float _timeToDestroy;
+    [SerializeField]
+    private float _timeToDestroy;
 
     private Rigidbody2D _rigidbody;
 
-    public static UnityAction playerShooted;
+    public static UnityEvent playerShooted = new UnityEvent();
+    public static UnityEvent<Vector3> bulletDestored = new UnityEvent<Vector3>();
+
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
 
-        Destroy(gameObject, _timeToDestroy); 
+        Destroy(gameObject, _timeToDestroy);
     }
 
     void Update()
@@ -26,9 +28,9 @@ public class Bullet : MonoBehaviour
         _rigidbody.velocity = transform.right * _speed * Time.deltaTime;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.TryGetComponent(out ShooterEnemy shooter))
+        if (collision.gameObject.TryGetComponent(out ShooterEnemy shooter))
         {
             return;
         }
@@ -39,6 +41,7 @@ public class Bullet : MonoBehaviour
             playerShooted?.Invoke();
         }
 
+        bulletDestored?.Invoke(gameObject.transform.position);
         Destroy(gameObject);
     }
 }

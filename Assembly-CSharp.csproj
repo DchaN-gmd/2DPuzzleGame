@@ -56,18 +56,24 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PlatformController.cs" />
-    <Compile Include="Assets\Scripts\MoveWallButton.cs" />
+    <Compile Include="Assets\Scripts\Platform\PlatformController.cs" />
+    <Compile Include="Assets\Scripts\Platform\MoveWallButton.cs" />
+    <Compile Include="Assets\Scripts\EnemyScripts\PatrolEnemy.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IPlayerKillable.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\Abyss.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Character.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\BlueCharacter.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\UI\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PinkCharacter.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\ShooterEnemy.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
+    <Compile Include="Assets\Scripts\Particles\Explosion.cs" />
+    <Compile Include="Assets\Scripts\Pool\PoolMono.cs" />
+    <Compile Include="Assets\Scripts\Pool\ExploisonsPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -654,6 +660,10 @@
       <Project>{9859A36E-6AE2-4A76-40F0-E6A3F6E47EF3}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{EF989156-A6B0-E9C7-B472-B3D471BF7E52}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{F3377877-05E7-A7CE-2D8D-79F74186FD8D}</Project>
       <Name>Unity.Timeline</Name>
@@ -677,10 +687,6 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{7FBB1D20-78BB-59C0-CD0F-B032FAD6599E}</Project>
       <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{EF989156-A6B0-E9C7-B472-B3D471BF7E52}</Project>
-      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

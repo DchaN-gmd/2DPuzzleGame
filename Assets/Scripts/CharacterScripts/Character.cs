@@ -39,6 +39,12 @@ public class Character : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        Idle();
+        _rigidbody2D.velocity = Vector2.zero;
+    }
+
     private void MoveLeft()
     {
         _rigidbody2D.velocity = new Vector2(_speed * _inertiaOfMove * Time.deltaTime, _rigidbody2D.velocity.y);
