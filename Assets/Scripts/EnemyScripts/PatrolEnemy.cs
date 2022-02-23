@@ -37,7 +37,5 @@ public class PatrolEnemy : MonoBehaviour, IPlayerKillable
             Destroy(collision.gameObject);
             OnPlayerDied?.Invoke();
         }
-
-        Destroy(gameObject);
     }
 }

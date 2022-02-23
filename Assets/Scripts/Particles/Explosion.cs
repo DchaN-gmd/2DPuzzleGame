@@ -6,11 +6,12 @@ public class Explosion : MonoBehaviour
 {
     [SerializeField] private ParticleSystem _particle;
 
-    private float _lifeTime;
+    [SerializeField] private float _lifeTime;
 
+    [System.Obsolete]
     private void Start()
     {
-        _lifeTime = _particle.startLifetime;
+        _particle.startLifetime = _lifeTime;
     }
 
     private void OnEnable()

@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
     {
         ChangeState();
 
-        if (Input.GetKey(KeyCode.Space) && _playerState != PlayerState.Jump)
+        if (Input.GetKey(KeyCode.Space))
         {
             Jump();
         }

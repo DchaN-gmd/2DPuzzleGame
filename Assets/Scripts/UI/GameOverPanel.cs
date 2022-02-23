@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameOverPanel : MonoBehaviour
 {
-    private Animator _animator;
+    [SerializeField] private Button _pauseButton;
 
+    private Animator _animator;
+    
     void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
@@ -24,5 +27,6 @@ public class GameOverPanel : MonoBehaviour
     private void OnGameOver()
     {
         _animator.Play("GameOverPanel");
+        _pauseButton.gameObject.SetActive(false);
     }
 }

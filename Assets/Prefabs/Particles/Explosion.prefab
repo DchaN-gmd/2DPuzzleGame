@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _particle: {fileID: 3807102524135701682}
+  _lifeTime: 0.4
 --- !u!1 &6376841949976004353
 GameObject:
   m_ObjectHideFlags: 0
