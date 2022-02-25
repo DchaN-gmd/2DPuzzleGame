@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     private int _charactersFinished;
     private Abyss _abyss;
     private ChangeCharacter _changeCharacter;
+    private VictoryPanel _victoryPanel;
 
     [SerializeField] private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();
 
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviour
     {
         _charactersCount = FindObjectOfType<ChangeCharacter>().GetComponent<ChangeCharacter>().CharactersCount;
         _finishPoints.AddRange(FindObjectsOfType<FinishPoint>());
+        _victoryPanel = FindObjectOfType<VictoryPanel>().GetComponent<VictoryPanel>();
 
         _playerKillables.AddRange(GameObject.FindObjectsOfType<MonoBehaviour>().OfType<IPlayerKillable>());
 
@@ -71,19 +73,31 @@ public class GameController : MonoBehaviour
 
     private void FinishGame()
     {
-        Application.Quit();
+        Time.timeScale = 0.15f;
+        _victoryPanel.ShowVictoryPanel();
     }
 
     private void GameOver()
     {
         _playerDied?.Invoke();
         Time.timeScale = 0.15f;
-        Debug.Log("Game over");
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+
+    public void GoToNextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
         Time.timeScale = 1;
     }
 }

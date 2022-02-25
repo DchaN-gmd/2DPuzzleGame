@@ -67,15 +67,17 @@
     <Compile Include="Assets\Scripts\Pool\PoolMono.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\Character.cs" />
     <Compile Include="Assets\Scripts\Pool\ExploisonsPool.cs" />
+    <Compile Include="Assets\Scripts\UI\VictoryPanel.cs" />
     <Compile Include="Assets\Scripts\GameController\GameController.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\BlueCharacter.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\GameOverPanel.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\UI\PausePanel.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PinkCharacter.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\ShooterEnemy.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
-    <Compile Include="Assets\Scripts\UI\PausePanel.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
