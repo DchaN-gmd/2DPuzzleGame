@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformController : MonoBehaviour
+public class PlatformController : Platform
 {
     private BoxCollider2D _colider;
 

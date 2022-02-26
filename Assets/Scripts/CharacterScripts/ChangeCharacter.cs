@@ -11,7 +11,7 @@ public class ChangeCharacter : MonoBehaviour
 
     public int CharactersCount { get; private set; }
 
-    private void Awake()
+    private void Start()
     {
         characters.AddRange(GameObject.FindObjectsOfType<Character>());
         for(int i = 1; i<=characters.Count-1; i++)

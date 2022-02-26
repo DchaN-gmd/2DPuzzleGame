@@ -9,9 +9,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private List<FinishPoint> _finishPoints;
 
     private int _charactersCount;
-    private int _charactersFinished;
-    private Abyss _abyss;
-    private ChangeCharacter _changeCharacter;
+    [SerializeField] private int _charactersFinished;
+    //private Abyss _abyss;
+    //private ChangeCharacter _changeCharacter;
     private VictoryPanel _victoryPanel;
 
     [SerializeField] private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();

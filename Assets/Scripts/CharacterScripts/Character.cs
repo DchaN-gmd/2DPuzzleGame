@@ -105,7 +105,7 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out PlatformController platformController) && _playerState == PlayerState.Jump)
+        if (collision.gameObject.TryGetComponent(out Platform platform) && _playerState == PlayerState.Jump)
         {
             _rigidbody2D.velocity = Vector2.zero;
             Idle();
