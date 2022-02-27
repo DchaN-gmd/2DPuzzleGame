@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class GameOverPanel : MonoBehaviour
 {
     [SerializeField] private Button _pauseButton;
+    [SerializeField] private Button _restartButton;
 
     private Animator _animator;
     
+    
     void Start()
     {
+        _restartButton.gameObject.SetActive(false);
         _animator = gameObject.GetComponent<Animator>();
     }
 

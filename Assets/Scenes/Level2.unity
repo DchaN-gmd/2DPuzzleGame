@@ -373,6 +373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2511985210137724952, guid: 878bc6bf88907874c959ae67c5672e29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1683477637}
     - target: {fileID: 2511985210751290970, guid: 878bc6bf88907874c959ae67c5672e29, type: 3}
       propertyPath: m_Name
       value: CanvasOverlay
@@ -2088,6 +2092,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8549167187119741990, guid: ed494c1f7367ad8449f686ab1b9fadb4, type: 3}
   m_PrefabInstance: {fileID: 1746408413}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1624537120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2511985210137724952, guid: 878bc6bf88907874c959ae67c5672e29, type: 3}
+  m_PrefabInstance: {fileID: 335540511}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1683477636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2139,12 +2154,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9125052864575925442, guid: f8b5db9fcc913ac4fb2ab3c2c4174bce, type: 3}
+      propertyPath: _restartButton
+      value: 
+      objectReference: {fileID: 1624537120}
     - target: {fileID: 9125052864575925443, guid: f8b5db9fcc913ac4fb2ab3c2c4174bce, type: 3}
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8b5db9fcc913ac4fb2ab3c2c4174bce, type: 3}
+--- !u!114 &1683477637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9125052864575925442, guid: f8b5db9fcc913ac4fb2ab3c2c4174bce, type: 3}
+  m_PrefabInstance: {fileID: 1683477636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e89888fda82cc40b04b1c31638599c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1706809401
 PrefabInstance:
   m_ObjectHideFlags: 0

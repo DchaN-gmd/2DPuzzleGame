@@ -32,10 +32,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -795,7 +793,7 @@ ScriptsOnlyBuild:
     className: AudioPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 0689ca8add3921e6f19ab82c4cc89ebf
+      Hash: 2913b630280c7059fb252b9646a01889
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -825,7 +823,7 @@ ScriptsOnlyBuild:
     className: CameraController
   - hash:
       serializedVersion: 2
-      Hash: b5626b9986f119d7b5bea1d59df7defc
+      Hash: 2cce2d770041bf0111ee674796e1e682
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameOverPanel

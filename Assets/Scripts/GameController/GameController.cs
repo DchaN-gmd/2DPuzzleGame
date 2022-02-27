@@ -1,17 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class GameController : MonoBehaviour
 {
     [SerializeField] private List<FinishPoint> _finishPoints;
 
     private int _charactersCount;
-    [SerializeField] private int _charactersFinished;
-    //private Abyss _abyss;
-    //private ChangeCharacter _changeCharacter;
+    private int _charactersFinished;
     private VictoryPanel _victoryPanel;
 
     [SerializeField] private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();
