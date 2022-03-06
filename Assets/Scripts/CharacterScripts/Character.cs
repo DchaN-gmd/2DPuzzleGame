@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     
     private float _inertiaOfMove;
 
-    private void Awake()
+    private void Start()
     {
         _animator = gameObject.GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -105,10 +105,26 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out Platform platform) && _playerState == PlayerState.Jump)
+        if (collision.gameObject.TryGetComponent(out Platform platform))
         {
-            _rigidbody2D.velocity = Vector2.zero;
-            Idle();
+            if (_playerState == PlayerState.Jump)
+            {
+                _rigidbody2D.velocity = Vector2.zero;
+                Idle();
+            }
+                
+            if (collision.gameObject.TryGetComponent(out PatrolScript patrolScript))
+            {
+                transform.parent = collision.transform;
+            }   
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out Platform platform) && collision.gameObject.TryGetComponent(out PatrolScript patrolScript))
+        {
+            transform.parent = null;
         }
     }
 

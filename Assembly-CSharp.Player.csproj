@@ -77,8 +77,9 @@
     <Compile Include="Assets\Scripts\UI\PausePanel.cs" />
     <Compile Include="Assets\Scripts\CharacterScripts\PinkCharacter.cs" />
     <Compile Include="Assets\Scripts\EnemyScripts\ShooterEnemy.cs" />
-    <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
     <Compile Include="Assets\Scripts\Platform\Platform.cs" />
+    <Compile Include="Assets\Scripts\MovableScripts\PatrolScript.cs" />
+    <Compile Include="Assets\Scripts\CharacterScripts\ChangeCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

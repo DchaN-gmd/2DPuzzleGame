@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,9 +21,9 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, _timeToDestroy);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        _rigidbody.velocity = transform.right * _speed * Time.deltaTime;
+        _rigidbody.velocity = new Vector2(transform.right.x, transform.position.y) * _speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

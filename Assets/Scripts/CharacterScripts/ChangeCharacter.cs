@@ -7,19 +7,22 @@ public class ChangeCharacter : MonoBehaviour
 {
     [SerializeField] private List<Character> characters;
 
-    [HideInInspector] public UnityAction <Character> characterChanged;
+    [HideInInspector] public UnityAction<Character> characterChanged;
 
-    public int CharactersCount { get; private set; }
+    public int CharactersCount { get { return characters.Count; } }
 
     private void Awake()
     {
-        characters.AddRange(GameObject.FindObjectsOfType<Character>());
+        characters.AddRange(FindObjectsOfType<Character>());
         for(int i = 1; i<=characters.Count-1; i++)
         {
             characters[i].GetComponent<Character>().enabled = false;
         }
+    }
+
+    private void Start()
+    {
         characterChanged.Invoke(characters[0]);
-        CharactersCount = characters.Count;
     }
 
     private void Update()

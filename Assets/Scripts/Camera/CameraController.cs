@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
 
     private ChangeCharacter _changeCharacter;
 
-    private Transform _player;
+    [SerializeField]private Transform _player;
     private Vector3 _cameraTargetPosition;
 
     private bool _isLeft;

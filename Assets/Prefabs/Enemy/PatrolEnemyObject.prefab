@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4667115283672214427}
   - component: {fileID: 185304663}
   - component: {fileID: 185304662}
+  - component: {fileID: 3566365116647097994}
   m_Layer: 0
   m_Name: PatrolEnemy
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4667115283672214423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1713, y: 1.1713, z: 1.1713}
   m_Children: []
   m_Father: {fileID: 4667115283900825721}
@@ -114,10 +115,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc63eb78cef6054caacf4e8732c32a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
-  _patrolPoints:
-  - {fileID: 4667115284362517922}
-  - {fileID: 4667115284549097645}
 --- !u!198 &185304663
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4948,6 +4945,22 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &3566365116647097994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667115283672214423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5631760102cd5af47a83dd574987027d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 5
+  _patrolPoints:
+  - {fileID: 4667115284362517922}
+  - {fileID: 4667115284549097645}
 --- !u!1 &4667115283900825722
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,7 +4985,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4667115283900825722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.414656, y: -17.71, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4667115284362517922}
@@ -5005,7 +5018,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4667115284362517923}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1.1713, y: 1.1713, z: 1.1713}
   m_Children: []
   m_Father: {fileID: 4667115283900825721}
@@ -5035,7 +5048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4667115284549097646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1.1713, y: 1.1713, z: 1.1713}
   m_Children: []
   m_Father: {fileID: 4667115283900825721}

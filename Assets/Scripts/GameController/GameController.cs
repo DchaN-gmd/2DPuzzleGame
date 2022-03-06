@@ -7,13 +7,12 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] private List<FinishPoint> _finishPoints;
-
     private int _charactersCount;
     private int _charactersFinished;
     private VictoryPanel _victoryPanel;
 
-    [SerializeField] private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();
+    private List<FinishPoint> _finishPoints = new List<FinishPoint>();
+    private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();
 
     [HideInInspector] public static UnityAction _playerDied;
 

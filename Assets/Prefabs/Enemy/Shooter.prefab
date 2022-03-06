@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bullet: {fileID: 1271372951811625203, guid: 1ce77a164218cc74c9464183351ca4cc, type: 3}
-  _timeToShot: 3
+  _timeToShot: 2
   _barrel: {fileID: 2565994539187984407}
 --- !u!61 &2565994540306868183
 BoxCollider2D:
