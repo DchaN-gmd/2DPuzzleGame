@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
     
     private float _inertiaOfMove;
 
-    private void Start()
+    private void Awake()
     {
         _animator = gameObject.GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();

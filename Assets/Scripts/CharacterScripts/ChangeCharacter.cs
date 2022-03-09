@@ -14,13 +14,13 @@ public class ChangeCharacter : MonoBehaviour
     private void Awake()
     {
         characters.AddRange(FindObjectsOfType<Character>());
-        for(int i = 1; i<=characters.Count-1; i++)
+        for(int i = 1; i < characters.Count; i++)
         {
             characters[i].GetComponent<Character>().enabled = false;
         }
     }
 
-    private void Start()
+    public void Start()
     {
         characterChanged.Invoke(characters[0]);
     }
@@ -40,7 +40,7 @@ public class ChangeCharacter : MonoBehaviour
 
         Character lastCharacter = characters[0];
 
-        for (int i = 1; i<=characters.Count-1; i++)
+        for (int i = 1; i < characters.Count; i++)
         {
             characters[i - 1] = characters[i];
         }

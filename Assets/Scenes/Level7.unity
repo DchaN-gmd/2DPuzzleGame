@@ -1743,6 +1743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shooter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6231992961982286249, guid: 492b46b91b4a5344c939324d81a6c709, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492b46b91b4a5344c939324d81a6c709, type: 3}
 --- !u!1001 &1409016801
@@ -2788,6 +2792,10 @@ PrefabInstance:
     - target: {fileID: 1264032705485155379, guid: 72c522d1af3e99e4db93ed210e40602c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669676968943524475, guid: 72c522d1af3e99e4db93ed210e40602c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8011587441304609105, guid: 72c522d1af3e99e4db93ed210e40602c, type: 3}
       propertyPath: _worldCameraPosition

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2913326038804581084}
   - component: {fileID: 2913326038804581085}
   - component: {fileID: 2913326038804581073}
+  - component: {fileID: 375621087032249717}
   - component: {fileID: 5170154016583848385}
   - component: {fileID: 737393912}
-  - component: {fileID: 375621087032249717}
   - component: {fileID: 8755657570824569472}
   m_Layer: 0
   m_Name: Boba
@@ -143,34 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 315
   _jumpForce: 420
---- !u!114 &5170154016583848385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913326038804581083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c54bdee9e6a8eae449be203bf5ffa035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!70 &737393912
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913326038804581083}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8}
-  m_Size: {x: 1.29, y: 1.38}
-  m_Direction: 0
 --- !u!198 &375621087032249717
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4877,6 +4849,34 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &5170154016583848385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913326038804581083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54bdee9e6a8eae449be203bf5ffa035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &737393912
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913326038804581083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.8}
+  m_Size: {x: 1.29, y: 1.38}
+  m_Direction: 0
 --- !u!199 &8755657570824569472
 ParticleSystemRenderer:
   serializedVersion: 6

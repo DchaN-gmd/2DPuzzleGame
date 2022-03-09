@@ -8,7 +8,13 @@ public class ShooterEnemy : MonoBehaviour
     [SerializeField] private float _timeToShot;
     [SerializeField] private Transform _barrel;
 
+    private AudioSource _audio;
     private float _timer;
+
+    private void Start()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -23,6 +29,8 @@ public class ShooterEnemy : MonoBehaviour
         {
             var bullet = Instantiate(_bullet, _barrel.position, _barrel.transform.rotation);
             _timer = 0;
+            _audio.pitch = Random.Range(0.75f, 1.25f);
+            _audio.Play();
         }
     }
 }

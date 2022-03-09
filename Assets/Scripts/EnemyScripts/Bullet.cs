@@ -23,12 +23,17 @@ public class Bullet : MonoBehaviour
 
     void FixedUpdate()
     {
-        _rigidbody.velocity = new Vector2(transform.right.x, transform.position.y) * _speed;
+        _rigidbody.velocity = gameObject.transform.InverseTransformVector(Vector2.right) * _speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent(out ShooterEnemy shooter))
+        {
+            return;
+        }
+
+        if (collision.gameObject.TryGetComponent(out PatrolEnemy patrolEnemy))
         {
             return;
         }

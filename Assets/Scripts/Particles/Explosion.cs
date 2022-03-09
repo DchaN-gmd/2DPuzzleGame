@@ -8,10 +8,13 @@ public class Explosion : MonoBehaviour
 
     [SerializeField] private float _lifeTime;
 
+    private AudioSource _audio;
+
     [System.Obsolete]
     private void Start()
     {
         _particle.startLifetime = _lifeTime;
+        _audio = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -35,6 +38,8 @@ public class Explosion : MonoBehaviour
 
     private void Deactivate()
     {
+        _audio.pitch = Random.Range(0.75f, 1.25f);
+        _audio.Play();
         gameObject.SetActive(false);
     }
 }
