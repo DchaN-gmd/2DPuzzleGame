@@ -5,24 +5,26 @@ using UnityEngine.Events;
 
 public class ChangeCharacter : MonoBehaviour
 {
-    [SerializeField] private List<Character> characters;
+    [SerializeField] private List<Character> _characters;
 
     [HideInInspector] public UnityAction<Character> characterChanged;
 
-    public int CharactersCount { get { return characters.Count; } }
+    public int CharactersCount { get { return _characters.Count; } }
 
     private void Awake()
     {
-        characters.AddRange(FindObjectsOfType<Character>());
-        for(int i = 1; i < characters.Count; i++)
+        _characters.Add(FindObjectOfType<BlueCharacter>().GetComponent<Character>());
+        _characters.Add(FindObjectOfType<PinkCharacter>().GetComponent<Character>());
+        _characters[0].GetComponent<Character>().enabled = true;
+        for (int i = 1; i < _characters.Count; i++)
         {
-            characters[i].GetComponent<Character>().enabled = false;
+            _characters[i].GetComponent<Character>().enabled = false;
         }
     }
 
     public void Start()
     {
-        characterChanged.Invoke(characters[0]);
+        characterChanged.Invoke(_characters[0]);
     }
 
     private void Update()
@@ -35,17 +37,16 @@ public class ChangeCharacter : MonoBehaviour
 
     private void Change()
     {
-        characters[0].GetComponent<Character>().enabled = false;
-        characters[1].GetComponent<Character>().enabled = true;
+        _characters[0].GetComponent<Character>().enabled = false;
+        _characters[1].GetComponent<Character>().enabled = true;
 
-        Character lastCharacter = characters[0];
+        Character lastCharacter = _characters[0];
 
-        for (int i = 1; i < characters.Count; i++)
+        for (int i = 1; i < _characters.Count; i++)
         {
-            characters[i - 1] = characters[i];
+            _characters[i - 1] = _characters[i];
         }
-        characters[characters.Count - 1] = lastCharacter;
-        characterChanged?.Invoke(characters[0]);
+        _characters[_characters.Count - 1] = lastCharacter;
+        characterChanged?.Invoke(_characters[0]);
     }
-
 }

@@ -81,7 +81,12 @@ public class Character : MonoBehaviour
             }
         }
 
-        if (_inertiaOfMove == 0 && _playerState == PlayerState.Walk)
+        if (_playerState == PlayerState.Idle)
+        {
+            Idle();
+        }    
+
+            if (_inertiaOfMove == 0 && _playerState == PlayerState.Walk)
         {
             Idle();
         }
