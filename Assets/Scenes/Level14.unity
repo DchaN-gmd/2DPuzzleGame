@@ -1045,17 +1045,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4667115283900825721, guid: ed713235537e31542bb24c68de3e8b72, type: 3}
   m_PrefabInstance: {fileID: 1578112098}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &680604651 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9125052864575925442, guid: f8b5db9fcc913ac4fb2ab3c2c4174bce, type: 3}
-  m_PrefabInstance: {fileID: 3629668484043472346}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e89888fda82cc40b04b1c31638599c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &716648736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7650517359472896441, guid: d5d8333002728724ea0796d908024220, type: 3}
@@ -12853,10 +12842,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2511985210137724952, guid: 878bc6bf88907874c959ae67c5672e29, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 680604651}
     - target: {fileID: 2511985210751290970, guid: 878bc6bf88907874c959ae67c5672e29, type: 3}
       propertyPath: m_Name
       value: CanvasOverlay

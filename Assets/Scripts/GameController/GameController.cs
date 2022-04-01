@@ -1,15 +1,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] private AudioMixer _mixer;
+
     private int _charactersCount;
     private int _charactersFinished;
     private VictoryPanel _victoryPanel;
+    private AudioSource _gameOverAudio;
+
 
     private List<FinishPoint> _finishPoints = new List<FinishPoint>();
     private List<IPlayerKillable> _playerKillables = new List<IPlayerKillable>();
@@ -25,6 +30,11 @@ public class GameController : MonoBehaviour
         _playerKillables.AddRange(GameObject.FindObjectsOfType<MonoBehaviour>().OfType<IPlayerKillable>());
 
         SubscribeToGameOverEvent();
+
+        _mixer.SetFloat("MusicVolume", 0);
+        _mixer.SetFloat("EffectsVolume", 0);
+
+        _gameOverAudio = GetComponent<AudioSource>();
     }
 
     private void SubscribeToGameOverEvent()
@@ -78,6 +88,9 @@ public class GameController : MonoBehaviour
     private void GameOver()
     {
         _playerDied?.Invoke();
+        _mixer.SetFloat("MusicVolume", -80);
+        _mixer.SetFloat("EffectsVolume", -80);
+        _gameOverAudio.Play();
         Time.timeScale = 0.15f;
     }
 

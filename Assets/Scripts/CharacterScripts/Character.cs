@@ -10,6 +10,7 @@ public class Character : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody2D;
+    private AudioSource _audio;
 
     private PlayerState _playerState;
     
@@ -20,6 +21,7 @@ public class Character : MonoBehaviour
         _animator = gameObject.GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audio = GetComponent<AudioSource>();
 
         _playerState = PlayerState.Idle;
     }
@@ -67,6 +69,7 @@ public class Character : MonoBehaviour
         {
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce * Time.deltaTime);
             _playerState = PlayerState.Jump;
+            _audio.Play();
             _animator.Play("Jump");
         }
     }
