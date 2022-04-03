@@ -98,4 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damping: 1.5
   _offset: {x: 3.5, y: 4, z: -16}
-  _worldCameraPosition: {fileID: 0}
+  _worldCameraPosition: {fileID: 7326759869307518253, guid: 4b327fe844efd1148b95c7ce9780ff1e, type: 3}
+  _player: {fileID: 0}
